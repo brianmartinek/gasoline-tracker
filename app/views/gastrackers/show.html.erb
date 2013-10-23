@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Date:</b>
+  <%= @gastracker.dateform %>
+</p>
+
+<p>
+  <b>Vehicle:</b>
+  <%= @gastracker.vehicle %>
+</p>
+
+<p>
+  <b>Gallons:</b>
+  <%= @gastracker.gallons %>
+</p>
+
+<p>
+  <b>Marketprice:</b>
+  <%= @gastracker.marketprice %>
+</p>
+
+<p>
+  <b>Totalregularfillup:</b>
+  <%= @gastracker.totalregularfillup %>
+</p>
+
+<p>
+  <b>Artificialprice:</b>
+  <%= @gastracker.artificialprice %>
+</p>
+
+<p>
+  <b>Savingstransfer:</b>
+  <%= @gastracker.savingstransfer %>
+</p>
+
+<p>
+  <b>Totalfillupcost:</b>
+  <%= @gastracker.totalfillupcost %>
+</p>
+
+
+<%= link_to 'Edit', edit_gastracker_path(@gastracker) %> |
+<%= link_to 'Back', gastrackers_path %>

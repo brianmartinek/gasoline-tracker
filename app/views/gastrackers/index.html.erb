@@ -1,0 +1,37 @@
+<h1>Listing gastrackers</h1>
+
+<table>
+  <tr>
+    <th>Fillup Date</th>
+    <th>Vehicle</th>
+    <th>Gallons of Gasoline</th>
+    <th>Cost per Gallon</th>
+    <th>Totalregularfillup</th>
+    <th>Artificialprice</th>
+    <th>Savingstransfer</th>
+    <th>Totalfillupcost</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @gastrackers.each do |gastracker| %>
+  <tr>
+    <td><%= gastracker.dateform %></td>
+    <td><%= gastracker.vehicle %></td>
+    <td><%= gastracker.gallons %></td>
+    <td><%= gastracker.marketprice %></td>
+    <td><%= gastracker.totalregularfillup %></td>
+    <td><%= gastracker.artificialprice %></td>
+    <td><%= gastracker.savingstransfer %></td>
+    <td><%= gastracker.totalfillupcost %></td>
+    <td><%= link_to 'Show', gastracker %></td>
+    <td><%= link_to 'Edit', edit_gastracker_path(gastracker) %></td>
+    <td><%= link_to 'Destroy', gastracker, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Gastracker', new_gastracker_path %>

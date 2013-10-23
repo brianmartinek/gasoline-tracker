@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  date: 2013-10-22 14:42:43
+  vehicle: MyString
+  gallons: 1
+  marketprice: 1
+  totalregularfillup: 1
+  artificialprice: 1
+  savingstransfer: 1
+  totalfillupcost: 1
+
+two:
+  date: 2013-10-22 14:42:43
+  vehicle: MyString
+  gallons: 1
+  marketprice: 1
+  totalregularfillup: 1
+  artificialprice: 1
+  savingstransfer: 1
+  totalfillupcost: 1

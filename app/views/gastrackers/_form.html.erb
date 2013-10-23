@@ -1,0 +1,49 @@
+<%= form_for(@gastracker) do |f| %>
+  <% if @gastracker.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@gastracker.errors.count, "error") %> prohibited this gastracker from being saved:</h2>
+
+      <ul>
+      <% @gastracker.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date %><br />
+    <%= f.date_select :dateform %>
+  </div>
+  <div class="field">
+    <%= f.label :vehicle %><br />
+    <%= f.text_field :vehicle %>
+  </div>
+  <div class="field">
+    <%= f.label :gallons %><br />
+    <%= f.text_field :gallons %>
+  </div>
+  <div class="field">
+    <%= f.label :marketprice, "Market Price" %><br />
+    <%= f.text_field :marketprice, :value => number_with_precision(f.object.marketprice, :precision => 2) %>
+  </div>
+  <div class="field">
+    <%= f.hidden_field :totalregularfillup, :value => "0" %><br />
+    <%#= f.number_field :totalregularfillup %>
+  </div>
+  <div class="field">
+    <%= f.label :artificialprice%><br />
+    <%= f.text_field :artificialprice %>
+  </div>
+  <div class="field">
+    <%= f.hidden_field :savingstransfer, :value => "0" %><br />
+    <%#= f.number_field :savingstransfer %>
+  </div>
+  <div class="field">
+    <%= f.hidden_field :totalfillupcost, :value => "0" %><br />
+    <%#= f.number_field :totalfillupcost %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
